@@ -70,20 +70,6 @@ function init(){
 
 	container.appendChild( stats.domElement );
 	
-	var loader = new THREE.ObjectLoader();
-	loader.load( "http://www.threejs.org/examples/models/json/scene-animation.json", function ( loadedScene ) {
-
-		sceneAnimationClip = loadedScene.animations[0];
-		scene = loadedScene;
-		scene.add( camera );
-		scene.fog = new THREE.Fog( 0xffffff, 2000, 10000 );
-
-		mixer = new THREE.AnimationMixer( scene );
-
-		mixer.clipAction( sceneAnimationClip ).play();
-
-	} );
-	
 	window.addEventListener( 'resize', onWindowResize, false );
 }
 init();
