@@ -2,21 +2,29 @@
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
 let aspect = window.innerWidth/window.innerHeight;
-
-let scene , camera , renderer , geometry , material , cube , directionalLight , backLight;
+let scene,
+	camera,
+	renderer,
+	geometry,
+	material,
+	cube,
+	directionalLight,
+	backLight;
 
 function onWindowResize(){
 
-		camera.aspect = window.innerWidth / window.innerHeight;
-		camera.updateProjectionMatrix();
-		renderer.setSize( window.innerWidth, window.innerHeight );
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize( window.innerWidth, window.innerHeight );
 
 }
+
 function animate(){
 	requestAnimationFrame( animate );
 	render();
 	stats.update();
 }
+
 function render() {
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
@@ -56,7 +64,8 @@ function init(){
 	// http://stackoverflow.com/questions/9899807/three-js-detect-webgl-support-and-fallback-to-regular-canvas
 
 
-	renderer =  Detector.webgl ? new THREE.WebGLRenderer({ alpha: true }): new THREE.CanvasRenderer({ alpha: true });
+	//renderer =  Detector.webgl ? new THREE.WebGLRenderer({ alpha: true }): new THREE.CanvasRenderer({ alpha: true });
+	renderer = new THREE.WebGLRenderer( { alpha: true } );
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.domElement.style.position = "absolute";
@@ -72,5 +81,6 @@ function init(){
 	
 	window.addEventListener( 'resize', onWindowResize, false );
 }
+
 init();
 animate();
