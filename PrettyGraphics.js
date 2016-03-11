@@ -12,13 +12,16 @@ function onWindowResize(){
 		renderer.setSize( window.innerWidth, window.innerHeight );
 
 }
+function animate(){
+	requestAnimationFrame( animate );
+	render();
+	stats.update();
+}
 function render() {
-	requestAnimationFrame( render );
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
 	cube.rotation.z += 0.005;
 	renderer.render(scene, camera);
-	stats.update();
 }
 
 function init(){
@@ -64,6 +67,5 @@ function init(){
 	scene.add( backLight );
 
 	camera.position.z = 5;
-	render();
 }
 init();

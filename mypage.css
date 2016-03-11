@@ -45,6 +45,16 @@ font{
 	margin-right:10px;
 	font-family: 'Arvo', serif;
 }
+body {
+	color: #000;
+	font-family:Monospace;
+	font-size:13px;
+	text-align:center;
+
+	background-color: #fff;
+	margin: 0px;
+	overflow: hidden;
+}
 
 
 #stats { position: absolute; top:0; left: 0 }
