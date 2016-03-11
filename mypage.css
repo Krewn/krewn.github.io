@@ -46,6 +46,7 @@ font{
 	font-family: 'Arvo', serif;
 }
 
+
 #stats { position: absolute; top:0; left: 0 }
 #stats #fps { background: transparent !important }
 #stats #fps #fpsText { color: #777 !important }

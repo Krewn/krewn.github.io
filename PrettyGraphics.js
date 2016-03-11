@@ -4,7 +4,30 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 let aspect = window.innerWidth/window.innerHeight;
 
 let scene , camera , renderer , geometry , material , cube , directionalLight , backLight;
+
+function onWindowResize(){
+
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+		renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+function render() {
+	requestAnimationFrame( render );
+	cube.rotation.x += 0.01;
+	cube.rotation.y += 0.01;
+	cube.rotation.z += 0.005;
+	renderer.render(scene, camera);
+};
+
 function init(){
+	container = document.createElement( 'div' );
+	container.style.zIndex="-1";
+	container.style.position="absolute";
+	container.style.x="0px";
+	container.style.y="0px";
+	document.body.appendChild( container );
+	
 	scene = new THREE.Scene();
 	camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
@@ -12,8 +35,16 @@ function init(){
 
 
 	renderer =  Detector.webgl ? new THREE.WebGLRenderer({ alpha: true }): new THREE.CanvasRenderer({ alpha: true });
+	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
-	document.body.appendChild( renderer.domElement );
+	
+	container.appendChild( renderer.domElement );
+	stats = new Stats();
+	stats.domElement.style.position = 'absolute';
+	stats.domElement.style.top = '0px';
+	container.appendChild( stats.domElement );
+	
+	window.addEventListener( 'resize', onWindowResize, false );
 
 	// http://threejs.org/docs/#Manual/Introduction/Creating_a_scene
 
@@ -32,24 +63,6 @@ function init(){
 	scene.add( backLight );
 
 	camera.position.z = 5;
+	render();
 }
-function onWindowResize(){
-
-		camera.aspect = window.innerWidth / window.innerHeight;
-		camera.updateProjectionMatrix();
-
-		renderer.setSize( window.innerWidth, window.innerHeight );
-
-}
-function render() {
-		requestAnimationFrame( render );
-
-		cube.rotation.x += 0.01;
-		cube.rotation.y += 0.01;
-		cube.rotation.z += 0.005;
-
-		renderer.render(scene, camera);
-};
 init();
-window.addEventListener( 'resize', onWindowResize, false );
-render();
