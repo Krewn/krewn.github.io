@@ -18,6 +18,7 @@ function render() {
 	cube.rotation.y += 0.01;
 	cube.rotation.z += 0.005;
 	renderer.render(scene, camera);
+	stats.update();
 };
 
 function init(){
