@@ -34,6 +34,24 @@ function init(){
 	
 	scene = new THREE.Scene();
 	camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+	
+	// http://threejs.org/docs/#Manual/Introduction/Creating_a_scene
+
+	geometry = new THREE.BoxGeometry( 2.5, 2.5, 2.5 );
+	material = new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x009900, shininess: 70, shading: THREE.FlatShading } )
+	cube = new THREE.Mesh( geometry, material );
+	scene.add( cube );
+
+	directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+	directionalLight.position.set( 0, 1, 0 );
+	
+	backLight = new THREE.DirectionalLight( 0x444444, 0.5 );
+	backLight.position.set( 1, -1, 0.5 );
+	
+	scene.add( directionalLight );
+	scene.add( backLight );
+
+	camera.position.z = 5;
 
 	// http://stackoverflow.com/questions/9899807/three-js-detect-webgl-support-and-fallback-to-regular-canvas
 
@@ -52,25 +70,21 @@ function init(){
 
 	container.appendChild( stats.domElement );
 	
+	var loader = new THREE.ObjectLoader();
+	loader.load( "http://www.threejs.org/examples/models/json/scene-animation.json", function ( loadedScene ) {
+
+		sceneAnimationClip = loadedScene.animations[0];
+		scene = loadedScene;
+		scene.add( camera );
+		scene.fog = new THREE.Fog( 0xffffff, 2000, 10000 );
+
+		mixer = new THREE.AnimationMixer( scene );
+
+		mixer.clipAction( sceneAnimationClip ).play();
+
+	} );
+	
 	window.addEventListener( 'resize', onWindowResize, false );
-
-	// http://threejs.org/docs/#Manual/Introduction/Creating_a_scene
-
-	geometry = new THREE.BoxGeometry( 2.5, 2.5, 2.5 );
-	material = new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x009900, shininess: 70, shading: THREE.FlatShading } )
-	cube = new THREE.Mesh( geometry, material );
-	scene.add( cube );
-
-	directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
-	directionalLight.position.set( 0, 1, 0 );
-	
-	backLight = new THREE.DirectionalLight( 0x444444, 0.5 );
-	backLight.position.set( 1, -1, 0.5 );
-	
-	scene.add( directionalLight );
-	scene.add( backLight );
-
-	camera.position.z = 5;
 }
 init();
 animate();
