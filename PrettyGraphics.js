@@ -41,11 +41,15 @@ function init(){
 	renderer =  Detector.webgl ? new THREE.WebGLRenderer({ alpha: true }): new THREE.CanvasRenderer({ alpha: true });
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
-	
+	renderer.domElement.style.position = "absolute";
+	renderer.domElement.style.x = "0px";
+	renderer.domElement.style.y = "0px";
 	container.appendChild( renderer.domElement );
+
 	stats = new Stats();
 	stats.domElement.style.position = 'absolute';
 	stats.domElement.style.top = '0px';
+
 	container.appendChild( stats.domElement );
 	
 	window.addEventListener( 'resize', onWindowResize, false );
@@ -69,3 +73,4 @@ function init(){
 	camera.position.z = 5;
 }
 init();
+animate();
