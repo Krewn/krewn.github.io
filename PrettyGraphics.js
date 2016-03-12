@@ -1,4 +1,3 @@
-
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
 let aspect = window.innerWidth/window.innerHeight;
