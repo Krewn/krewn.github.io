@@ -1,7 +1,8 @@
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
 let aspect = window.innerWidth/window.innerHeight;
-let scene,
+let container,
+	scene,
 	camera,
 	renderer,
 	geometry,
@@ -19,17 +20,18 @@ function onWindowResize(){
 
 }
 
-function animate(){
-	requestAnimationFrame( animate );
-	render();
-	stats.update();
-}
 
 function render() {
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
 	cube.rotation.z += 0.005;
 	renderer.render(scene, camera);
+}
+
+function animate(){
+	requestAnimationFrame( animate );
+	render();
+	stats.update();
 }
 
 function init(){
