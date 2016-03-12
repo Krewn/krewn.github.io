@@ -12,7 +12,7 @@ let container,
 	backLight,
 	stats;
 
-function onWindowResize(){
+let onWindowResize = function(){
 
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
@@ -21,20 +21,20 @@ function onWindowResize(){
 }
 
 
-function render() {
+let render = function() {
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
 	cube.rotation.z += 0.005;
 	renderer.render(scene, camera);
 }
 
-function animate(){
+let animate = function(){
 	requestAnimationFrame( animate );
 	render();
 	stats.update();
 }
 
-function init(){
+let init = function(){
 	container = document.createElement( 'div' );
 	container.style.zIndex="-1";
 	container.style.position="absolute";
