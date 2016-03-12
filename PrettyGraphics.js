@@ -8,7 +8,8 @@ let scene,
 	material,
 	cube,
 	directionalLight,
-	backLight;
+	backLight,
+	stats;
 
 function onWindowResize(){
 
