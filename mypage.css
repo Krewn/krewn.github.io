@@ -1,50 +1,3 @@
-div{
-	margin-top:1px;
-	margin-bottom:1px;
-	padding-right:3px;
-	padding-left:3px;
-	margin-left:3px;
-	opacity: 0.95;
-}
-h1{
-	margin-top:1px;
-	margin-bottom:-10px;
-	margin-right:0px;
-	margin-left:10px;
-	font-family: 'Arvo', serif;
-}
-#container {
-    background-color: #000;
-    width: 200px;
-    height: 200px;
-    border: 1px solid black;
-    margin: 100px;
-    padding: 0px;
-    position: static; /* fixed or static */
-    top: 100px;
-    left: 100px;
-}
-h2{
-	margin-top:0px;
-	margin-bottom:-20px;
-	margin-right:0px;
-	margin-left:10px;
-	font-family: 'Arvo', serif;
-}
-a{
-	margin-top:0px;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:10px;
-	font-family: 'Arvo', serif;
-}
-font{
-	margin-top:0px;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:10px;
-	font-family: 'Arvo', serif;
-}
 body {
 	color: #000;
 	font-family:Monospace;
@@ -54,6 +7,66 @@ body {
 	background-color: #fff;
 	margin: 0px;
 	overflow: hidden;
+}
+
+div{
+	margin-top:1px;
+	margin-bottom:1px;
+	padding-right:3px;
+	padding-left:3px;
+	margin-left:3px;
+	opacity: 0.95;
+}
+#langsAndLinks{
+	width: 336px;
+}
+.ClearShadeLeft{
+	border-left: 2px solid #CCCCCC;
+	position: absolute;
+	z-index:1;
+}
+.blue1{
+	width: 240px;
+	background-color: lightblue;
+	border-right: 2px solid #CCCCCC;
+}
+.blue2{
+	background-color: lightblue;
+	border-right: 2px solid #AAAAAA;
+}
+.blue3{
+	background-color: lightblue;
+	width : 233px;
+	text-align: center;
+	padding-top: 1px;
+	float:right;
+	border-right: 2px solid #AAAAAA;
+}
+h1{
+	margin-top:1px;
+	margin-bottom:-10px;
+	margin-right:0px;
+	margin-left:10px;
+	font-family: 'Arvo', serif;
+}
+h2{
+	margin-top:0px;
+	margin-bottom:-20px;
+	margin-right:0px;
+	margin-left:10px;
+	font-family: 'Arvo', serif;
+}
+a{
+	margin-left:0px;
+	margin-right:10px;
+	font-family: 'Arvo', serif;
+}
+font{
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:30px;
+	margin-right:10px;
+	font-family: 'Arvo', serif;
 }
 
 .icon-link{
@@ -74,7 +87,26 @@ body {
 	transition: padding-left  .3s ease-out;
 	
 }
-
+#container {
+    background-color: #000;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 100px;
+    padding: 0px;
+    position: static; /* fixed or static */
+    top: 100px;
+    left: 100px;
+}
+#fl{
+	float : left;
+}
+#fr{
+	float : right;
+}
+#fc{
+	float : center;
+}
 
 #stats { position: absolute; top:0; left: 0 }
 #stats #fps { background: transparent !important }
