@@ -56,6 +56,25 @@ body {
 	overflow: hidden;
 }
 
+.icon-link{
+	padding-left: 2px;
+	padding-right: 2px;
+	transition: padding-right  .3s ease-in;
+	transition: padding-left  .3s ease-in;
+}
+
+.icon-link, icon-link:visited{
+	color: #ecf0f1;
+}
+.icon-link:hover{
+	color: #2980b9;
+	padding-left: 8px;
+	padding-right: 8px;
+	transition: padding-right  .3s ease-out;
+	transition: padding-left  .3s ease-out;
+	
+}
+
 
 #stats { position: absolute; top:0; left: 0 }
 #stats #fps { background: transparent !important }
