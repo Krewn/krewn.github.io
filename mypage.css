@@ -72,8 +72,9 @@ font{
 .icon-link{
 	padding-left: 2px;
 	padding-right: 2px;
-	transition: padding-right  .3s ease-in;
-	transition: padding-left  .3s ease-in;
+	transition: padding-right  .3s ease;
+	transition: padding-left  .3s ease;
+	transition: color  .3s ease;
 }
 
 .icon-link, icon-link:visited{
@@ -83,8 +84,9 @@ font{
 	color: #2980b9;
 	padding-left: 8px;
 	padding-right: 8px;
-	transition: padding-right  .3s ease-out;
-	transition: padding-left  .3s ease-out;
+	transition: color  .3s ease;
+	transition: padding-right  .3s ease;
+	transition: padding-left  .3s ease;
 	
 }
 #container {
