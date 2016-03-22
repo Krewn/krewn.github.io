@@ -10,11 +10,11 @@ body {
 }
 canvas{
 	opacity: 0.0;
-	transition: opacity 4.0s ease;
+	transition: opacity 4.0s ease-in;
 }
 canvas:hover{
 	opacity: 1.0;
-	transition: opacity 4.0s ease;
+	transition: opacity 4.0s ease-in;
 }
 
 div{
