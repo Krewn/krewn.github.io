@@ -35,15 +35,15 @@ div{
 }
 .blue1{
 	width: 240px;
-	background-color: tomato;
+	background-color: ghostwhite;
 	border-right: 2px solid #CCCCCC;
 }
 .blue2{
-	background-color: lightblue;
+	background-color: darkkhaki;
 	border-right: 2px solid #AAAAAA;
 }
 .blue3{
-	background-color: lightblue;
+	background-color: darkkhaki;
 	width : 233px;
 	text-align: center;
 	padding-top: 1px;
