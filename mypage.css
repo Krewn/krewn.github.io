@@ -33,6 +33,7 @@ div{
 	border-left: 2px solid #CCCCCC;
 	position: absolute;
 	z-index:1;
+	padding-left: 142px;
 }
 .blue1{
 	width: 240px;
