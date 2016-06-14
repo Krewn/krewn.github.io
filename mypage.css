@@ -29,6 +29,7 @@ div{
 	width: 336px;
 }
 .ClearShadeLeft{
+	display: inline-block;
 	border-left: 2px solid #CCCCCC;
 	position: absolute;
 	z-index:1;
