@@ -34,7 +34,7 @@ div{
 	border-left: 2px solid #CCCCCC;
 	position: absolute;
 	z-index:1;
-	padding-left: 142px;
+	padding-left: 10 px;
 }
 .blue1{
 	pointer-events:visible;
