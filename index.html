@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="./mypage.css">
+		<link rel="stylesheet" type="text/css" href="./fits.css">
 		
 		<title>Kevin Nelson</title>
 		
@@ -37,44 +37,97 @@
 		<meta name="twitter:image" content="https://krewn.github.io/ApophysisOutPuts/Origin/adbgPostPost.jpg">
 
 		<link rel="shortcut icon" type="image/png" href="smile.png" />`
-	</head>	
-	<body>	<!--<a href="https://www.metavision.com/" style="display: inline-block; position: absolute; opacity: 0.88;"><img src="https://s.adroll.com/a/7LS/UFO/7LSUFOLSEZFR3K7UCV4PST.jpg" width="160" height="600" border="0" alt="" style=" _width:158px; _height:598px; _overflow:hidden; border:1px solid #000000;margin:-1px;"></a>!-->
-		<div class = "ClearShadeLeft">
-			<div class="blue1" id = "infoDiv">
-				<h1 id = "nameHeader">
-					Kevin Nelson
-				</h1><br>
-				<a href="mailto:kpie314@gmail.com", id= "fr">kpie314@gmail.com</a><br>
-				<font id = "fr">(802)-760-0677</font><br>
-				<a href="KevinNelson.pdf">Resume</a>
-				<a href="https://krewn.github.io/AgileContracts", id= "fr">Agile Contracts</a><br>
+	</head>
+	<body onresize="windowResize()">
+		<div id = "background">
+			<img src="./f2.JPG" alt="">
+		</div>
+		<div class = "navbar">
+			<div class="list-group">
+				<a class="button" href = "https://krewn.github.io">Home</a>
+				<a href="https://github.com/krewn" class="icon-link"><i class="fa fa-github fa-2x"></i></a>
+				<a href="https://www.linkedin.com/in/kevin-nelson-0a499980" class="icon-link"><i class="fa fa-linkedin fa-2x"></i></a>
+				<a href="https://www.facebook.com/Kevinb867" class="icon-link"><i class="fa fa-facebook fa-2x"></i></a>
+				<a href="https://twitter.com/freelancephilos" class="icon-link"><i class="fa fa-twitter fa-2x"></i></a>
+				<a href="https://krewn.github.io/Reprogramming" class="icon-link"><i class="fa fa-asterisk fa-2x"></i></a>
+			</div>
+		</div>
+		<div class="pageContent">
+			<font><h1 id = "nameHeader">Kevin Nelson</h1></font>
+			<font>(802)-760-0677</font><br>
+			<font><a href="mailto:kpie314@gmail.com", id= "fr">kpie314@gmail.com</a></font>
+			<font><a href="KevinNelson.pdf">Resume</a></font>
+			<font><a href="https://krewn.github.io/AgileContracts", id= "fr">Agile_Contracts</a></font><hr>
+			<div class = "indent">
+				<h2 id = "Preferred Stack"> WebDev </h2>
+				<font> Html, Css, JavaScript, MongoDB</font>
+
+				<h2 id = "General"> General Programming </h2>
+				<font> C, C++, C#, Php, Java, mySql</font><br>
+
+				<h2 id = "DataScience"> Data Science</h2>
+				<font>R, Matlab(octave), Python</font><br>
 			</div><br>
-		
-			<div id = "langsAndLinks">
-				<div class = "blue2" id = "pro">
-					<h2 id = "Preferred Stack"> WebDev </h2><br>
-					<font> Html, Css, JavaScript, MongoDB</font><br>
-				
-					<h2 id = "General"> General Programming </h2><br>
-					<font> C, C++, C#, Php, Java, mySql</font><br>
-				
-					<h2 id = "DataScience"> Data Science</h2><br>
-					<font>R, Matlab(octave), Python</font><br>
-				</div><br>
-				<div class = "blue3">
-					<div class="list-group">
-						<a href="https://github.com/krewn" class="icon-link"><i class="fa fa-github fa-2x"></i></a>
-						<a href="https://www.linkedin.com/in/kevin-nelson-0a499980" class="icon-link"><i class="fa fa-linkedin fa-2x"></i></a>
-						<a href="https://www.facebook.com/Kevinb867" class="icon-link"><i class="fa fa-facebook fa-2x"></i></a>
-						<a href="https://twitter.com/freelancephilos" class="icon-link"><i class="fa fa-twitter fa-2x"></i></a>
-						<a href="https://krewn.github.io/Reprogramming" class="icon-link"><i class="fa fa-asterisk fa-2x"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="blue1" id ="fr">	
-				<a href="https://krewn.github.io/bukeVote/" id="fl">Vute</a><a href="https://krewn.github.io/ApophysisOutPuts/" id ="fr">imgs</a>
-		
-			</div>
-		</div><br>
-	</body>		
+			<img src="./me.JPG" alt="there is supposed to be a picture of me here...">
+		</div>
+		<script>
+			//start quote http://stackoverflow.com/questions/2481350/how-to-get-scrollbar-position-with-javascript
+			document.getScroll= function(){
+			 if(window.pageYOffset!= undefined){
+			  return [pageXOffset, pageYOffset];
+			 }
+			 else{
+			  let sx, sy, d= document, r= d.documentElement, b= d.body;
+			  sx= r.scrollLeft || b.scrollLeft || 0;
+			  sy= r.scrollTop || b.scrollTop || 0;
+			  return [sx, sy];
+			 }
+			}
+			//start quote http://stackoverflow.com/questions/1145850/how-to-get-height-of-entire-document-with-javascript
+			function docHeight(){
+				let body = document.body,
+				html = document.documentElement;
+				let height = Math.max( body.scrollHeight, body.offsetHeight, 
+				html.clientHeight, html.scrollHeight, html.offsetHeight );
+				return(height);
+			}
+			//start quote http://stackoverflow.com/questions/3437786/get-the-size-of-the-screen-current-web-page-and-browser-window
+			function wndsize(){
+			  let w = 0;var h = 0;
+			  //IE
+			  if(!window.innerWidth){
+			    if(!(document.documentElement.clientWidth == 0)){
+			      //strict mode
+			      w = document.documentElement.clientWidth;h = document.documentElement.clientHeight;
+			    } else{
+			      //quirks mode
+			      w = document.body.clientWidth;h = document.body.clientHeight;
+			    }
+			  } else {
+			    //w3c
+			    w = window.innerWidth;h = window.innerHeight;
+			  }
+			  return [w,h];
+			}
+			//end quote
+			let height = docHeight();
+			let windowHeight = wndsize()[1];			
+			let bg = document.getElementById('background');
+			function backgroundParallax(){
+				let pos = document.getScroll();
+				bg.style.top = String(parseInt((height-bg.clientHeight)*(pos[1]/(height-windowHeight)),10))+"px";
+				//alert(bg.clientHeight); //<-The height of the background
+				//alert(height);          //<-The height of the document
+				//alert(pos[1]);          //<-The height above the screen
+				//alert(windowHeight);    //<-The height of the window
+			}
+			function windowResize(){
+				bg.style.top = "0px";
+				windowHeight = wndsize()[1];
+				height = docHeight();
+				backgroundParallax();
+			}
+			window.onscroll = backgroundParallax;
+		</script>
+	</body>
 </html>
