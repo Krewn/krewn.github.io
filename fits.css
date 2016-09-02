@@ -20,6 +20,14 @@ div.pageContent{
 	z-index: 0;
 	background-color: #eee;
 	opacity: 0.85;
+	box-shadow: 5px 5px 5px #000;
+}
+div.subContent{
+	background-color: white;
+	box-shadow: 5px 5px 5px #888888;
+}
+div.bottomMargin{
+	margin-bottom:3vh;
 }
 div#background {
 	position: absolute;
