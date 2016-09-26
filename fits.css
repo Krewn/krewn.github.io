@@ -23,8 +23,11 @@ div.pageContent{
 	box-shadow: 5px 5px 5px #000;
 }
 div.subContent{
+	margin-left: 2vw;
+	padding-left: 2vw;
 	background-color: white;
 	box-shadow: 5px 5px 5px #888888;
+	opacity: 0.85;
 }
 div.bottomMargin{
 	margin-bottom:3vh;
